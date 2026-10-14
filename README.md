@@ -1,6 +1,6 @@
 # Manager Library API
 
-Implementación inicial de HU-01 en Laravel 11.
+Implementación inicial de HU-01 en Laravel 12.
 
 ## Ejecutar
 
