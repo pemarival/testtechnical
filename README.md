@@ -5,7 +5,15 @@ Implementación inicial de HU-01 en Laravel 11.
 ## Ejecutar
 
 ```bash
-composer install
+docker compose build
+docker compose run --rm api php artisan migrate --seed
+docker compose up
+```
+
+Alternativa, dentro de un contenedor PHP/Composer:
+
+```bash
+docker run --rm -v "${PWD}:/app" -w /app composer:2 install --no-interaction --prefer-dist
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
