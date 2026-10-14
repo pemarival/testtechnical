@@ -12,7 +12,6 @@ return new class extends Migration {
             $table->string('username', 120)->unique();
             $table->string('password_hash', 512);
             $table->string('role', 40);
-            $table->check("role in ('admin', 'librarian')", 'ck_user_role');
         });
     }
 
